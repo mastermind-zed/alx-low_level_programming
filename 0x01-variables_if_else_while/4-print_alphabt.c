@@ -1,34 +1,23 @@
-#include #include <stdio.h>
+i#include <stdio.h>
 /**
- * main - Prints the alphabet without q and e
+ * main - Program entry point
  *
- * Return: Always 0 (Success)
+ * Return: 0 on success. Error code otherwise
  */
 int main(void)
 {
-	char c;
+	char a = 'a';
+	int n = 0;
 
-	for (c = 'a'; c <= 'z'; ++c)
+	while (n <= 25)
 	{
-	if (c != 'e' && c != 'q')
-	putchar(c);
+		if (a != 'q' && a != 'e')
+		{
+			putchar(a);
+		}
+		a++;
+		n++;
 	}
-
 	putchar('\n');
 	return (0);
-}<stdio.h> 
-
-int main ()
-{
-	char ch = 'a' ;
-
-	printf("Lowercase alphabets: \n") ;
-	while(ch <= 'z')
-	{
-		pritnf("%c ", ch) ;
-		ch++;
-	}
-	pritnf ("\n") ;
-
-	return 0;
 }
