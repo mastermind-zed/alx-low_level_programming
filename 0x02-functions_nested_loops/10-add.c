@@ -3,14 +3,14 @@
 /**
  * add - adds two integrers and returns the result
  *
- * @x: number being added
+ * @m: number being added
  *
- * @y: number being added
+ * @n: number being added
  *
  * Return: Always 0.
  *
  */
-int add(int x, int y)
+int add(int m, int n)
 {
-	return (x + y);
+	return (m + n);
 }
