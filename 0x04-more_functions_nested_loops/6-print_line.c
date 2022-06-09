@@ -6,7 +6,6 @@
  * @n : The number of '-' characters to use
  * Return: Void.
  */
-
 void print_line(int n)
 {
 	int i;
