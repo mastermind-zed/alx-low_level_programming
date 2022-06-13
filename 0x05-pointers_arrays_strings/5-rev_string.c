@@ -23,6 +23,6 @@ void rev_string (char *s)
 	}
 	for (i = 0; i <= size; i++)
 	{
-		s[i] = rev[i]
+		s[i] = rev[i];
 	}
 }
