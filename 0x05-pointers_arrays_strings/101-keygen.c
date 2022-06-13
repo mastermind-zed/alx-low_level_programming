@@ -25,6 +25,6 @@ int main(void)
 		}
 	}
 	p[j] = '\0';
-	printf("%S", p);
+	printf("%s", p);
 	return (0);
 }
