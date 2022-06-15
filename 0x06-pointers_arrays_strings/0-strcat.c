@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * *_strcat -appends the src string to the dest string 
  * @dest: first string 
