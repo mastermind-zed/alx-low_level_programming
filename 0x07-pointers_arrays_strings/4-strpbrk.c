@@ -1,11 +1,12 @@
 #include "main.h"
 
 /**
- * _strpbrk - check the code for Holberton School students.
- * @s: The array to be searched
- * @accept: Target bytes from searching
- * Return: Always 0.
- */
+* *_strpbrk - locates first occurance in a string
+* @s: the string pointed to
+* @accept: the character to found
+*
+* Return: pointer to dest.
+*/
 
 char *_strpbrk(char *s, char *accept)
 {
