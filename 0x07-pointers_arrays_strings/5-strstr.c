@@ -2,37 +2,31 @@
 
 /**
  * _strstr - locates a substring
- * @haystack: string to search through
- * @needle: string to match
- * Return: pointer to initial segment of haystack
+ * @haystack: string
+ * @needle: string
+ *
+ * Return: a pointer to the beginning of a substring
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, start;
-	int nlen = 0;
+int i;
+int j;
 
-	i = 0;
-	j = 0;
-	start = 0;
-
-	while (needle[nlen] != '\0')
-	{
-		nlen++;
-	}
-	for (i = 0; haystack[i] != '\0'; i++)
-	{
-		for (j = 0; j < nlen && haystack[i] == needle[j]; j++, i++)
-		{
-			if (j == 0)
-			{
-				start = i;
-			}
-			if (j == nlen - 1)
-			{
-				return (haystack + start);
-			}
-		}
-	}
-	return (0);
+for (i = 0; haystack[i] != '\0';)
+{
+for (j = 0; needle[j] != '\0'; j++)
+{
+if (needle[j] != haystack[i + j])
+{
+break;
+}
+}
+if (needle[j] == '\0')
+{
+return (&haystack[i]);
+}
+i++;
+}
+return ('\0');
 }
