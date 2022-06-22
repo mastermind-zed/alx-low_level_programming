@@ -3,9 +3,8 @@ int squareroot(int n, int i);
 /**
  * _sqrt_recursion - Entry point
  * @n: input
- * Return: Always 0 (Sucess)
+ * Return: Always 0 (Success)
  */
-
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
@@ -13,14 +12,12 @@ int _sqrt_recursion(int n)
 	else
 		return (squareroot(n, (n + 1) / 2));
 }
-
 /**
  * squareroot - checks if perfect square
  * @n: input
  * @i: counter
- * Retrun: if square root
+ * Return: if square root
  */
-
 int squareroot(int n, int i)
 {
 	if (i < 1)
