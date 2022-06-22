@@ -1,29 +1,29 @@
 #include "main.h"
-int squareroot(int n, int i);
+
 /**
- * _sqrt_recursion - Entry point
- * @n: input
- * Return: Always 0 (Success)
+ * isqrt - Evaluate from 1 to n
+ * @x: input integer
+ * @y: iterated integer
+ * Return: square root or -1
  */
+int isqrt(int x, int y)
+{
+	if ((y * y) == x)
+		return (y);
+	else if ((y * y) > x)
+		return (-1);
+	return (isqrt(x, y + 1));
+}
+
+/**
+ * _sqrt_recursion - returns the natural square root of a number
+ * @n: integer
+ * Return: natural square root
+ */
+
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
 		return (-1);
-	else
-		return (squareroot(n, (n + 1) / 2));
-}
-/**
- * squareroot - checks if perfect square
- * @n: input
- * @i: counter
- * Return: if square root
- */
-int squareroot(int n, int i)
-{
-	if (i < 1)
-		return (-1);
-	else if (i * i == n)
-		return (i);
-	else
-		return (squareroot(n, i - 1));
+	return (isqrt(n, 0));
 }
