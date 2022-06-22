@@ -21,7 +21,7 @@ int _sqrt_recursion(int n)
  * Retrun: if square root
  */
 
-int sqaureroot(int n, int i)
+int squareroot(int n, int i)
 {
 	if (i < 1)
 		return (-1);
