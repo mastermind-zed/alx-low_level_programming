@@ -2,24 +2,25 @@
 #include <stdlib.h>
 
 /**
- * _print - moves a string one place to the left and prints the string
+ * _print - Entry point
  * @str: string to move
  * @l: size of string
  *
  * Return: void
  */
+
 void _print(char *str, int l)
 {
-	int i, j;
+	int x, y;
 
-	i = j = 0;
-	while (i < l)
+	x = y = 0;
+	while (x < l)
 	{
-		if (str[i] != '0')
-			j = 1;
-		if (j || i == l - 1)
-			_putchar(str[i]);
-		i++;
+		if (str[x] != '0')
+			y = 1;
+		if (y || x == l - 1)
+			_putchar(str[x]);
+		x++;
 	}
 
 	_putchar('\n');
@@ -27,7 +28,7 @@ void _print(char *str, int l)
 }
 
 /**
- * mul - multiplies a char with a string and places the answer into dest
+ * mul - Entry point
  * @n: char to multiply
  * @num: string to multiply
  * @num_index: last non NULL index of num
@@ -36,6 +37,7 @@ void _print(char *str, int l)
  *
  * Return: pointer to dest, or NULL on failure
  */
+
 char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 {
 	int j, k, mul, mulrem, add, addrem;
@@ -61,12 +63,14 @@ char *mul(char n, char *num, int num_index, char *dest, int dest_index)
 	}
 	return (dest);
 }
+
 /**
- * check_for_digits - checks the arguments to ensure they are digits
+ * check_for_digits - Entry point
  * @av: pointer to arguments
  *
  * Return: 0 if digits, 1 if not
  */
+
 int check_for_digits(char **av)
 {
 	int i, j;
@@ -89,6 +93,7 @@ int check_for_digits(char **av)
  *
  * Return: void
  */
+
 void init(char *str, int l)
 {
 	int i;
@@ -105,6 +110,7 @@ void init(char *str, int l)
  *
  * Return: zero, or exit status of 98 if failure
  */
+
 int main(int argc, char *argv[])
 {
 	int l1, l2, ln, ti, i;
