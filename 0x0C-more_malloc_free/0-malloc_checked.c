@@ -1,20 +1,17 @@
 #include "main.h"
 #include <stdlib.h>
 
-/** 
- * *malloc_checked - Entry point
- * @b: value passed in for array creation
- * Return: pointer to allocated memory
+/**
+ * *malloc_checked - function that allocates memory using malloc
+ * @b: unsigned integer
+ * Return: 98 if malloc fails
  */
 
 void *malloc_checked(unsigned int b)
 {
-	void *s;
+	void *n = malloc(b);
 
-	s = malloc(b);
-	if (s == NULL)
-	{
+	if (n == NULL)
 		exit(98);
-	}
-	return (s);
+	return (n);
 }
