@@ -30,4 +30,4 @@ algorithm section .
 * [0x0C. C - more malloc, free](./0x0C-more_malloc_free)
 * [0x0D. C - preprocessor](./0x0D-preprocessor)
 * [0x0E. C - Structures, typedef](./0x0E-structures_typedef)
-* [0x0F. C - Variadic functions](./0x0F-variadic_functions)
+* [0x0F. C - Functions pointers](./0x0F-function_pointers)
