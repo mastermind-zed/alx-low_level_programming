@@ -31,3 +31,4 @@ algorithm section .
 * [0x0D. C - preprocessor](./0x0D-preprocessor)
 * [0x0E. C - Structures, typedef](./0x0E-structures_typedef)
 * [0x0F. C - Functions pointers](./0x0F-function_pointers)
+* [0x10. C - Variadic functions](./0x0F-function_pointers)
