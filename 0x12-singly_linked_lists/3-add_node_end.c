@@ -1,53 +1,40 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
- * add_node_end - Adds a new node at the end of the list
- * @head: pointer to a pointer to a linked list
- * @str: Pointer for a string input
- * Return: the address of the new element, or NULL if it failed
+ * add_node_end - Add node at the end
+ * of a list_t list.
+ * @head: head of the linked list.
+ * @str: string to store in the list.
+ * Return: address of the head.
  */
-
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node;
-	list_t *pass;
+	list_t *new, *temp;
+	size_t nchar;
 
-	new_node = malloc(sizeof(list_t));
-
-	if (new_node == NULL)
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
 		return (NULL);
 
-	pass = *head;
+	new->str = strdup(str);
 
-	new_node->str = strdup(str);
-	new_node->len  = _strlen(str);
-	new_node->next = NULL;
+	for (nchar = 0; str[nchar]; nchar++)
+		;
 
-	if (*head == NULL)
+	new->len = nchar;
+	new->next = NULL;
+	temp = *head;
+
+	if (temp == NULL)
 	{
-		*head = new_node;
-		return (*head);
+		*head = new;
 	}
-	while (pass->next != NULL)
-		pass = pass->next;
-	pass->next = new_node;
+	else
+	{
+		while (temp->next != NULL)
+			temp = temp->next;
+		temp->next = new;
+	}
+
 	return (*head);
-}
-
-/**
- * _strlen - returns the length of the string
- *@s: string being counted
- * Return: Always 0.
- */
-
-int _strlen(const char *s)
-{
-	int i;
-
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
 }
