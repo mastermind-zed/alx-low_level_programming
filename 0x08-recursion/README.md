@@ -2,9 +2,9 @@
 ===================
 
 -   By Julien Barbier
--   Ongoing project - started 09-15-2021, must end by 09-16-2021 (in about 4 hours) - you're done with 0% of tasks.
--   Checker was released at 09-15-2021 12:00 AM
--   QA review fully automated.
+-   Ongoing project - started Jun 22,2022, must end by Jun 23,2022 (in about 4 hours) - you're done with 0% of tasks.
+-   Checker was released at Jun 22,2022 12:00 PM
+-   An auto review will be launched at the deadline.
 
 ![](https://s3.amazonaws.com/intranet-projects-files/holbertonschool-low_level_programming/219/a88.jpg)
 

@@ -2,9 +2,9 @@
 ===========================
 
 -   By Alexandre Gautier
--   Ongoing project - started 09-29-2021, must end by 09-30-2021 (in about 18 hours) - you're done with 0% of tasks.
--   Checker will be released at 09-29-2021 06:00 PM
--   QA review fully automated.
+-   Ongoing project - started Jul 6,2022, must end by Jul 7,022 (in about 18 hours) - you're done with 0% of tasks.
+-   Checker will be released at Jul 6,2022 06:00 PM
+-   An auto review will be launched at the deadline.
 
 Resources
 ---------
