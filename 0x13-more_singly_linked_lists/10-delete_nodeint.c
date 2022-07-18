@@ -1,59 +1,42 @@
 #include "lists.h"
 
 /**
- * delete_nodeint_at_indx - Entry point
- * @head: head of the list
- * @index: index of the node to be added
+ * delete_nodeint_at_index - Entry point
+ * @head: head of  the listint_t list
+ * @index: the index of the node that should be deleted
  *
- * Return: the address of the node
+ * Return: 1 if it succeeded, -1 if it failed.
  */
 
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	listint_t *old_node = NULL;
-	listint_t *previous_node = NULL;
-	unsigned int i = 0, list_len = listint_len(*head);
+	unsigned int x;
+	listint_t *prior;
+	listint_t *after;
 
-	if ((index > list_len) || (list_len == 0))
+	after = *head;
+	x = 0;
+
+	if (*head == NULL)
 		return (-1);
-	while (head != NULL)
+	if (index == 0)
 	{
-		if (i == index)
-		{
-			old_node = *head;
-			if (i == 0)
-			{
-				*head = old_node->next;
-				free(old_node);
-				return (1);
-			}
-			previous_node->next = old_node->next;
-			free(old_node);
-			return (1);
-		}
-		else if ((i + 1) == index)
-			previous_node = *head;
-		head = &((*head)->next);
-		i++;
+		*head = after->next;
+		free(after);
+		return (1);
 	}
-	return (-1);
-}
 
-/**
- * listint_len - Entry point
- * @h: head of the list
- *
- * Return: the number of elements
- */
-size_t listint_len(const listint_t *h)
-{
-	const listint_t *cursor = h;
-	size_t count = 0;
-
-	while (cursor != NULL)
+	while (after != NULL && x < index - 1)
 	{
-		count += 1;
-		cursor = cursor->next;
+		after = after->next;
+		x++;
+		if (after == NULL || after->next == NULL)
+			return (-1);
 	}
-	return (count);
+
+	prior = after->next->next;
+	free(after->next);
+	after->next = prior;
+
+	return (1);
 }
