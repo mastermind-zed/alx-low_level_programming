@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * clear_bit - Entry point
@@ -14,7 +14,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 
 	mask = ~(mask << index);
 	
-	if (mask == 0x00) /* something went wrong mask is all 0's */
+	if (mask == 0x00)
 	
 		return (-1);
 	
