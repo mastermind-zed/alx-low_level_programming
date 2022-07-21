@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * set_bit - function that sets the valuse of a bit to 1 at a given index
+ * set_bit - Entry point
  * @n: unsigned long int
  * @index: the index starting from 0 of the bit you want to set
  *
@@ -10,10 +10,13 @@
 
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	if (index >= (sizeof(unsigned long int) * 8))
+	unsigned int x;
+
+	if (index > 63)
 		return (-1);
 
-	*n ^= (1 << index);
-	
+	x = 1 << index;
+	*n = (*n | x);
+
 	return (1);
 }
